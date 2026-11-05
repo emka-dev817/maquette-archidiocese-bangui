@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposition Archidiocèse de Bangui, E'Markete Agency</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#a3122a;        /* rouge cardinalice (chapeau des armoiries) */
+  --red-d:#6e0b1c;
+  --brick:#c2582f;      /* brique de la cathédrale / orange du site actuel */
+  --orange:#f46738;     /* orange du site actuel */
+  --gold:#c9a23f;       /* croix dorée des armoiries */
+  --ivory:#faf6ef;
+  --sand:#f1e8db;
+  --ink:#24140f;
+  --muted:#6f625a;
+  --line:#e7ddd0;
+  --r:18px;
+  --img:"https://archidiocesedebangui.org/wp-content/uploads/";
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Figtree,system-ui,sans-serif;color:var(--ink);background:#efe8de;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,h5,h6{font-family:Dosis,Figtree,sans-serif;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1500px;margin:0 auto;padding:0 32px}
+
+.intro{padding:56px 0 30px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.intro h1{font-size:44px;line-height:1.05;font-weight:800;color:var(--red-d);max-width:660px}
+.intro h1 span{color:var(--brick)}
+.intro p{margin-top:14px;color:var(--muted);max-width:580px;line-height:1.55}
+.intro .sign{text-align:right;font-size:13px;color:var(--muted);line-height:1.6}
+.intro .sign b{color:var(--ink)}
+.step{display:flex;align-items:center;gap:12px;margin:46px 0 16px;flex-wrap:wrap}
+.step .n{width:32px;height:32px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-family:Dosis;font-weight:800}
+.step h2{font-size:26px;font-weight:800;color:var(--red-d)}
+.step small{color:var(--muted);font-size:13px}
+.board{background:var(--ivory);border-radius:22px;box-shadow:0 30px 80px -40px rgba(60,20,10,.45);overflow:hidden}
+
+/* barre haute + navigation */
+.topbar{background:var(--red-d);color:#f4d9cf;font-size:13px;display:flex;justify-content:space-between;padding:9px 48px}
+.topbar b{color:#fff;font-weight:600}
+.nav{display:flex;align-items:center;gap:28px;padding:16px 48px;background:var(--ivory);border-bottom:1px solid var(--line);position:relative;z-index:3}
+.crest{display:flex;align-items:center;gap:14px}
+.crest img{width:60px;height:66px;object-fit:cover;object-position:50% 40%;border-radius:50% / 46%;background:#fff;box-shadow:0 0 0 1px var(--line)}
+.crest b{display:block;white-space:nowrap;font-family:Dosis;font-weight:800;font-size:22px;letter-spacing:.02em;color:var(--ink);line-height:1}
+.crest b span{color:var(--red)}
+.crest small{font-size:11px;letter-spacing:.24em;color:var(--brick);font-weight:700}
+.nav ul{display:flex;gap:18px;list-style:none;font-size:14px;font-weight:500;margin-left:auto;white-space:nowrap}
+.nav li.on{color:var(--red);font-weight:700;position:relative}
+.nav li.on:after{content:"";position:absolute;left:0;right:0;bottom:-24px;height:3px;background:var(--red);border-radius:3px}
+.btn{display:inline-flex;white-space:nowrap;align-items:center;gap:8px;border-radius:999px;padding:13px 22px;font-weight:700;font-size:14px}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 10px 24px -12px rgba(163,18,42,.9)}
+.btn-line{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+.btn-ghost{border:1.5px solid var(--line);color:var(--ink);background:#fff}
+
+/* héros cathédrale */
+.hero{position:relative;height:640px;color:#fff;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url("https://archidiocesedebangui.org/wp-content/uploads/2023/11/bag8.jpg") center 35%/cover}
+.hero .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(36,12,8,.88) 0%,rgba(36,12,8,.6) 40%,rgba(36,12,8,.05) 75%),linear-gradient(0deg,rgba(36,12,8,.55),transparent 40%)}
+.hero .in{position:relative;z-index:1;padding:110px 48px 0;max-width:780px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#ffc9a8}
+.eyebrow:before{content:"";width:34px;height:2px;background:var(--orange)}
+.hero h3{font-size:70px;line-height:1;font-weight:800;margin:18px 0 20px}
+.hero p{font-size:19px;line-height:1.55;color:#f3e2d8;max-width:600px}
+.hero .ctas{display:flex;gap:12px;margin-top:30px}
+.hero .motto{position:absolute;right:48px;bottom:40px;z-index:1;background:rgba(250,246,239,.96);color:var(--ink);border-radius:18px;padding:18px 20px;display:flex;gap:14px;align-items:center;max-width:380px;box-shadow:0 24px 50px -20px rgba(0,0,0,.6)}
+.hero .motto img{width:54px;height:60px;object-fit:cover;border-radius:50% / 46%}
+.hero .motto small{font-size:11px;letter-spacing:.18em;font-weight:800;color:var(--brick)}
+.hero .motto b{display:block;font-family:Dosis;font-size:19px;line-height:1.15}
+.dots{position:absolute;left:48px;bottom:44px;z-index:1;display:flex;gap:8px}
+.dots i{width:28px;height:4px;border-radius:4px;background:rgba(255,255,255,.4)}
+.dots i.on{background:#fff;width:46px}
+
+/* bande des horaires et chiffres */
+.strip{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;margin:-46px 48px 0;position:relative;z-index:2;border-radius:20px;box-shadow:0 24px 50px -30px rgba(60,20,10,.5);overflow:hidden}
+.strip div{padding:24px 26px;border-right:1px solid var(--line)}
+.strip div:last-child{border:0;background:var(--red);color:#fff}
+.strip small{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brick)}
+.strip div:last-child small{color:#ffd3c4}
+.strip b{display:block;font-family:Dosis;font-size:34px;font-weight:800;margin-top:4px}
+.strip span{font-size:13px;color:var(--muted)}
+.strip div:last-child span{color:#ffe3da}
+
+.section{padding:76px 48px}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:30px}
+.sec-head h4{font-size:40px;font-weight:800;color:var(--ink);line-height:1.05}
+.sec-head h4 em{font-style:normal;color:var(--red)}
+.sec-head .k{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--brick);display:block;margin-bottom:8px}
+.sec-head p{color:var(--muted);max-width:480px;line-height:1.55}
+.more{font-weight:700;color:var(--red);font-size:14px;white-space:nowrap}
+
+/* mot du cardinal */
+.word{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.word .ph{position:relative;height:520px;border-radius:26px;overflow:hidden;background:url("https://archidiocesedebangui.org/wp-content/uploads/2025/05/20200530_084113-scaled.jpg") 55% 30%/cover}
+.word .ph .cap{position:absolute;left:18px;bottom:18px;right:18px;background:rgba(250,246,239,.95);border-radius:14px;padding:14px 16px;font-size:13px;color:var(--muted)}
+.word .ph .cap b{display:block;color:var(--ink);font-family:Dosis;font-size:18px}
+.word blockquote{font-family:Dosis;font-size:34px;font-weight:700;line-height:1.2;color:var(--ink);position:relative;padding-top:40px}
+.word blockquote:before{content:"“";position:absolute;top:-30px;left:-6px;font-size:120px;color:var(--red);opacity:.9;line-height:1}
+.word p{color:var(--muted);line-height:1.65;margin-top:18px;font-size:16px}
+.sig{display:flex;align-items:center;gap:14px;margin-top:26px}
+.sig img{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:50% 15%}
+.sig b{display:block;font-family:Dosis;font-size:18px}
+.sig small{color:var(--muted);font-size:13px}
+
+/* actualités */
+.news{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:20px}
+.nc{background:#fff;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column}
+.nc .im{height:220px;background-size:cover;background-position:center}
+.nc.big .im{height:330px}
+.nc .bd{padding:22px;flex:1;display:flex;flex-direction:column}
+.cat{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.nc h5{font-size:22px;font-weight:800;line-height:1.15;margin:10px 0}
+.nc.big h5{font-size:28px}
+.nc p{color:var(--muted);font-size:14px;line-height:1.55;flex:1}
+.meta{margin-top:16px;font-size:12px;color:var(--muted);display:flex;justify-content:space-between}
+
+/* messes */
+.mass{background:var(--red-d);color:#fff;border-radius:26px;display:grid;grid-template-columns:1fr 1.2fr;overflow:hidden}
+.mass .l{padding:48px}
+.mass .l .k{color:#ffc9a8;font-size:12px;font-weight:800;letter-spacing:.2em}
+.mass h4{font-size:40px;font-weight:800;margin:10px 0 14px;line-height:1.05}
+.mass p{color:#f1d6cd;line-height:1.55}
+.finder{margin-top:26px;background:#fff;border-radius:16px;padding:8px;display:flex;gap:8px}
+.finder span{flex:1;padding:12px 14px;color:var(--muted);font-size:14px}
+.finder b{background:var(--orange);color:#fff;border-radius:12px;padding:12px 18px;font-size:14px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.tags span{font-size:12px;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 11px;color:#ffe3da}
+.mass .r{background:rgba(255,255,255,.05);padding:30px;display:grid;gap:12px;align-content:center}
+.par{background:#fff;color:var(--ink);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:64px 1fr auto;gap:16px;align-items:center}
+.par .im{width:64px;height:64px;border-radius:12px;background-size:cover;background-position:center}
+.par b{font-family:Dosis;font-size:18px;display:block}
+.par small{color:var(--muted);font-size:13px}
+.par .h{text-align:right;font-size:13px;color:var(--muted)}
+.par .h b{font-size:16px;color:var(--red)}
+
+/* gouvernance */
+.gov{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.pp{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.pp .im{height:250px;background-size:cover;background-position:50% 20%}
+.pp .bd{padding:16px 18px}
+.pp b{font-family:Dosis;font-size:19px;display:block}
+.pp small{color:var(--muted);font-size:13px}
+.emer{margin-top:22px;display:flex;gap:16px;align-items:center;background:var(--sand);border-radius:16px;padding:16px 20px;flex-wrap:wrap}
+.emer > b{font-family:Dosis;font-size:17px;margin-right:8px}
+.emer div{display:flex;align-items:center;gap:10px;background:#fff;border-radius:999px;padding:6px 14px 6px 6px;font-size:14px;font-weight:600}
+.emer img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+
+/* cathédrale + galerie */
+.cath{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.cath .t{background:#fff;border-radius:26px;padding:44px;border:1px solid var(--line)}
+.cath .t p{color:var(--muted);line-height:1.65;margin-top:14px}
+.cath .t ul{list-style:none;margin-top:22px;display:grid;gap:10px}
+.cath .t li{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding-bottom:10px;font-size:15px}
+.cath .t li span{color:var(--muted)}
+.gal{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:12px;min-height:460px}
+.gal div{border-radius:18px;background-size:cover;background-position:center}
+.gal div:first-child{grid-row:span 2}
+
+/* services */
+.serv{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sv{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.sv .ic{width:46px;height:46px;border-radius:14px;background:#fbe9e2;display:grid;place-items:center;font-size:22px}
+.sv h6{font-size:20px;font-weight:800;margin:14px 0 6px}
+.sv p{color:var(--muted);font-size:14px;line-height:1.5}
+
+/* contact + pied */
+.contact{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
+.cc{border-radius:26px;padding:40px;background:#fff;border:1px solid var(--line)}
+.cc h5{font-size:30px;font-weight:800}
+.lines{margin-top:20px;display:grid;gap:12px}
+.lines div{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding-bottom:12px;font-size:15px}
+.lines span{color:var(--muted)}
+.cc.news-l{background:var(--brick);color:#fff;border:0}
+.cc.news-l p{color:#ffe6dc;line-height:1.55;margin-top:10px}
+.cc.news-l .f{margin-top:22px;background:#fff;border-radius:14px;padding:8px;display:flex}
+.cc.news-l .f span{flex:1;color:var(--muted);padding:12px;font-size:14px}
+.cc.news-l .f b{background:var(--red-d);border-radius:10px;padding:12px 18px;font-size:14px}
+.footer{background:#1d0d09;color:#c9b3aa;padding:44px 48px 26px}
+.footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+.footer h6{color:#fff;font-size:16px;margin-bottom:12px}
+.footer p,.footer li{font-size:14px;line-height:1.8;list-style:none}
+.footer .bot{margin-top:30px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:12px;display:flex;justify-content:space-between}
+
+/* planche 2 */
+.duo{display:grid;grid-template-columns:1.6fr 1fr;gap:28px;align-items:start}
+.article{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 30px 80px -40px rgba(60,20,10,.45)}
+.article .cover{height:360px;background:url("https://archidiocesedebangui.org/wp-content/uploads/2026/10/Photo-lancement_Ndjoh.jpeg") center 40%/cover;position:relative}
+.article .cover:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(29,13,9,.85),transparent 60%)}
+.article .cover .h{position:absolute;left:44px;right:44px;bottom:30px;z-index:1;color:#fff}
+.article .cover h3{font-size:38px;font-weight:800;line-height:1.08;margin-top:10px}
+.article .cover .cat{color:#ffc9a8}
+.article .body{display:grid;grid-template-columns:1fr 260px;gap:34px;padding:34px 44px 44px}
+.article .lede{font-size:18px;line-height:1.6;color:var(--ink);font-weight:500}
+.article .txt p{color:#4d413a;line-height:1.75;margin-top:16px;font-size:15.5px}
+.article h6{font-size:20px;margin-top:24px;color:var(--red-d)}
+.article .by{display:flex;gap:10px;align-items:center;font-size:13px;color:var(--muted);margin-bottom:18px}
+.article .by i{width:34px;height:34px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-style:normal;font-weight:800;font-family:Dosis}
+.aside .box{background:var(--ivory);border-radius:16px;padding:18px;margin-bottom:14px}
+.aside .box b{font-family:Dosis;font-size:17px;display:block;margin-bottom:8px}
+.aside .box li{list-style:none;font-size:13px;color:var(--muted);padding:7px 0;border-bottom:1px solid var(--line)}
+.share{display:flex;gap:8px}
+.share span{flex:1;text-align:center;border-radius:10px;padding:10px 0;font-size:12px;font-weight:700;color:#fff}
+.mobile{width:380px;margin:0 auto;border-radius:48px;background:#1d0d09;padding:12px;box-shadow:0 40px 70px -40px rgba(60,20,10,.7)}
+.mscr{border-radius:38px;overflow:hidden;background:var(--ivory);height:820px;position:relative}
+.mscr .sb{display:flex;justify-content:space-between;padding:14px 26px 6px;font-size:13px;font-weight:700}
+.mscr .notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:110px;height:28px;background:#1d0d09;border-radius:20px}
+.mnav{display:flex;align-items:center;justify-content:space-between;padding:8px 18px 12px}
+.mnav .crest img{width:40px;height:44px}
+.mnav .crest b{font-size:15px}
+.mnav .crest small{font-size:9px}
+.burger{width:40px;height:40px;border-radius:12px;background:#fff;display:grid;place-items:center;font-weight:800;box-shadow:0 0 0 1px var(--line)}
+.mhero{margin:0 14px;height:300px;border-radius:24px;background:url("https://archidiocesedebangui.org/wp-content/uploads/2023/11/bag8.jpg") center/cover;position:relative;overflow:hidden;color:#fff}
+.mhero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(36,12,8,.9),rgba(36,12,8,.05) 70%)}
+.mhero div{position:absolute;left:18px;right:18px;bottom:18px;z-index:1}
+.mhero h4{font-size:30px;line-height:1.02;font-weight:800;margin-top:8px}
+.mhero .eyebrow{font-size:10px}
+.mq{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px}
+.mq div{background:#fff;border-radius:16px;padding:14px;border:1px solid var(--line)}
+.mq small{font-size:10px;font-weight:800;letter-spacing:.12em;color:var(--brick)}
+.mq b{display:block;font-family:Dosis;font-size:22px}
+.mq div.r{background:var(--red);color:#fff;border:0}.mq div.r small{color:#ffd3c4}
+.mlist{margin:4px 14px;background:#fff;border-radius:18px;border:1px solid var(--line);padding:6px 14px}
+.mlist .it{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.mlist .it:last-child{border:0}
+.mlist .it i{width:54px;height:54px;border-radius:12px;background-size:cover;background-position:center;flex:none}
+.mlist .it b{font-size:13.5px;line-height:1.25;display:block}
+.mlist .it small{font-size:11px;color:var(--red);font-weight:700}
+.mtab{position:absolute;left:14px;right:14px;bottom:14px;background:#1d0d09;color:#c9b3aa;border-radius:20px;display:flex;justify-content:space-around;padding:12px 6px;font-size:11px;font-weight:600}
+.mtab span.on{color:#fff}
+.cap{margin-top:16px;font-size:14px;line-height:1.5;color:var(--muted);text-align:center}
+.cap b{color:var(--ink)}
+.foot{padding:40px 0 60px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+@media (max-width:1100px){
+  .nav ul{display:none}
+  .strip,.news,.gov,.serv,.word,.mass,.cath,.contact,.duo,.footer .cols,.article .body{grid-template-columns:1fr}
+  .hero h3{font-size:46px}.hero .motto{display:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="intro">
+    <div>
+      <h1>Un nouveau site pour l'<span>Archidiocèse de Bangui</span></h1>
+      <p>Proposition de maquette : la page d'accueil, une page d'actualité et la version téléphone, avec les armoiries, les photos et les nouvelles publiées par l'archidiocèse.</p>
+    </div>
+    <div class="sign"><b>Travis Guibinga, E'Markete Agency</b><br>Maquette de proposition, novembre 2026<br>Couleurs reprises des armoiries et du site actuel</div>
+  </header>
+
+  <!-- ===================== PLANCHE 1 ===================== -->
+  <div class="step"><span class="n">1</span><h2>La page d'accueil</h2><small>Ordinateur, 1440 px</small></div>
+  <div class="board">
+
+    <div class="topbar"><span>« Chrétien de l'archidiocèse de Bangui, debout, va annoncer la Bonne Nouvelle »</span><span>Secrétariat : <b>archibangui@gmail.com</b> · <b>+236 75 44 59 75</b></span></div>
+    <nav class="nav">
+      <div class="crest"><img src="https://archidiocesedebangui.org/wp-content/uploads/2023/11/bag5.jpg" alt="Armoiries"><div><b>ARCHIDIOCÈSE <span>DE BANGUI</span></b><small>RÉPUBLIQUE CENTRAFRICAINE</small></div></div>
+      <ul><li class="on">Accueil</li><li>L'archidiocèse</li><li>Le Cardinal</li><li>Doyennés &amp; paroisses</li><li>Actualités</li><li>Messes &amp; sacrements</li><li>Contact</li></ul>
+      <a class="btn btn-red">Trouver une messe</a>
+    </nav>
+
+    <section class="hero">
+      <div class="bg"></div>
+      <div class="in">
+        <span class="eyebrow">Cathédrale Notre-Dame de l'Immaculée Conception</span>
+        <h3>Debout, va annoncer la Bonne Nouvelle</h3>
+        <p>L'Église catholique de Bangui : ses paroisses, ses pasteurs, ses célébrations et la vie de ses communautés, réunies en un seul lieu.</p>
+        <div class="ctas"><a class="btn btn-red">Découvrir l'archidiocèse</a><a class="btn btn-line">Lire les actualités</a></div>
+      </div>
+      <div class="dots"><i class="on"></i><i></i><i></i></div>
+      <div class="motto"><img src="https://archidiocesedebangui.org/wp-content/uploads/2023/11/bag5.jpg" alt=""><div><small>DEVISE DE L'ARCHEVÊQUE</small><b>« À l'image de Dieu il le créa »</b></div></div>
+    </section>
+
+    <div class="strip">
+      <div><small>Catholiques</small><b>693 600</b><span>fidèles dans l'archidiocèse</span></div>
+      <div><small>Paroisses</small><b>33</b><span>réparties en doyennés</span></div>
+      <div><small>Missions</small><b>166</b><span>communautés et chapelles</span></div>
+      <div><small>Ce dimanche</small><b>Messes</b><span>Horaires de chaque paroisse →</span></div>
+    </div>
+
+    <section class="section">
+      <div class="word">
+        <div class="ph"><div class="cap"><b>S. Ém. le Cardinal Dieudonné Nzapalainga, C.S.Sp.</b>Archevêque métropolitain de Bangui depuis 2012</div></div>
+        <div>
+          <span class="sec-head" style="display:block;margin:0"><span class="k">Le mot de l'Archevêque</span></span>
+          <blockquote>Bâtir une Église plus forte et plus unie, où chaque fidèle prend sa part dans la vie de la paroisse.</blockquote>
+          <p>Lors de sa visite pastorale à Saint Hubert de Ndjoh, le Cardinal a rappelé « le rôle des fidèles dans la vie de la paroisse, dans l'esprit synodal » : un appel à la coresponsabilité. Cet espace accueillera ses messages, ses lettres pastorales et l'agenda de ses visites.</p>
+          <div class="sig"><img src="https://archidiocesedebangui.org/wp-content/uploads/2025/05/Cardinal2-1.jpg" alt=""><div><b>Dieudonné Cardinal Nzapalainga</b><small>Archevêque de Bangui</small></div><a class="btn btn-ghost" style="margin-left:auto">Ses messages</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="sec-head"><div><span class="k">La vie de l'Église</span><h4>Actualités de <em>l'archidiocèse</em></h4></div><a class="more">Toutes les actualités →</a></div>
+      <div class="news">
+        <article class="nc big"><div class="im" style="background-image:url('https://archidiocesedebangui.org/wp-content/uploads/2026/10/Photo-lancement_Ndjoh.jpeg')"></div><div class="bd"><span class="cat">Pastorale · Visite pastorale</span><h5>Le Cardinal Nzapalainga en visite pastorale à la paroisse Saint Hubert de Ndjoh</h5><p>Du vendredi 30 octobre au dimanche 1er novembre, dans le 4e doyenné : messe à la chapelle Notre-Dame de la Mission de Bondio, catéchèse à Bougoudi-Ngata et Yadama, clôture du mois du Rosaire.</p><div class="meta"><span>31 octobre 2026</span><span>Par la Rédaction</span></div></div></article>
+        <article class="nc"><div class="im" style="background-image:url('https://archidiocesedebangui.org/wp-content/uploads/2026/11/Photo-paroisse-Bimon-768x1024.jpeg')"></div><div class="bd"><span class="cat">Paroisses</span><h5>Saint Jean-Baptiste de Bimon : une communauté en fête pour son nouveau curé</h5><p>Le jour de la Toussaint, l'abbé Philippe Grébalet a été installé curé, avec un jumelage fraternel avec Saint Benoît de Pétévo.</p><div class="meta"><span>3 novembre 2026</span><span>Bwa Dany Bandoba</span></div></div></article>
+        <article class="nc"><div class="im" style="background-image:url('https://archidiocesedebangui.org/wp-content/uploads/2026/10/cropped-Photo-en-avant-Saint-Marc-270x270.jpeg');background-size:cover"></div><div class="bd"><span class="cat">Communautés</span><h5>La chapelle Saint Marc rassemble ses fidèles</h5><p>Photos et nouvelles des communautés : chaque paroisse pourra publier ses événements depuis un simple téléphone.</p><div class="meta"><span>Octobre 2026</span><span>Service communication</span></div></div></article>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="mass">
+        <div class="l">
+          <span class="k">MESSES &amp; SACREMENTS</span>
+          <h4>Trouver une paroisse et l'heure de la messe</h4>
+          <p>Les 33 paroisses et leurs missions, avec leur adresse, leur curé et les horaires des célébrations, mis à jour par chaque paroisse.</p>
+          <div class="finder"><span>Quartier, paroisse ou doyenné…</span><b>Rechercher</b></div>
+          <div class="tags"><span>Baptême</span><span>Mariage</span><span>Confirmation</span><span>Catéchèse</span><span>Intentions de messe</span></div>
+        </div>
+        <div class="r">
+          <div class="par"><div class="im" style="background-image:url('https://archidiocesedebangui.org/wp-content/uploads/2023/11/bag33.jpg')"></div><div><b>Cathédrale Notre-Dame de l'Immaculée Conception</b><small>Centre-ville · Cathédrale</small></div><div class="h">Dimanche<br><b>à compléter</b></div></div>
+          <div class="par"><div class="im" style="background-image:url('https://archidiocesedebangui.org/wp-content/uploads/2026/11/Photo-paroisse-Bimon-768x1024.jpeg')"></div><div><b>Saint Jean-Baptiste de Bimon</b><small>Curé : abbé Philippe Grébalet</small></div><div class="h">Dimanche<br><b>à compléter</b></div></div>
+          <div class="par"><div class="im" style="background-image:url('https://archidiocesedebangui.org/wp-content/uploads/2026/10/Photo-lancement_Ndjoh.jpeg')"></div><div><b>Saint Hubert de Ndjoh</b><small>4e doyenné</small></div><div class="h">Dimanche<br><b>à compléter</b></div></div>
+          <div class="par"><div class="im" style="background-image:url('https://archidiocesedebangui.org/wp-content/uploads/2023/11/bag22.jpg')"></div><div><b>Saint Benoît de Pétévo</b><small>Paroisse jumelée avec Bimon</small></div><div class="h">Dimanche<br><b>à compléter</b></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="sec-head"><div><span class="k">Gouvernance</span><h4>L'Archevêque et <em>la Curie</em></h4></div><p>La Curie diocésaine assiste l'Archevêque dans la conduite pastorale, l'administration et la justice de l'archidiocèse.</p></div>
+      <div class="gov">
+        <div class="pp"><div class="im" style="background-image:url('https://archidiocesedebangui.org/wp-content/uploads/2025/05/Cardinal2-1.jpg')"></div><div class="bd"><b>Cardinal Dieudonné Nzapalainga</b><small>Archevêque métropolitain</small></div></div>
+        <div class="pp"><div class="im" style="background-image:url('https://archidiocesedebangui.org/wp-content/uploads/2025/05/IMG_20231213_102356_410-scaled.jpg')"></div><div class="bd"><b>Abbé Brad Walter Mazangue</b><small>Curie diocésaine · fonction à compléter</small></div></div>
+        <div class="pp"><div class="im" style="background-image:url('https://archidiocesedebangui.org/wp-content/uploads/2025/05/20200531_095926-scaled.jpg')"></div><div class="bd"><b>Abbé Matthieu Bondobo</b><small>Curie diocésaine · fonction à compléter</small></div></div>
+        <div class="pp"><div class="im" style="background:linear-gradient(160deg,var(--red),var(--red-d));display:grid;place-items:center;color:#fff;font-family:Dosis;font-size:56px;font-weight:800">GK</div><div class="bd"><b>Abbé Grégory Devariance Kopogo</b><small>Chancelier de l'archidiocèse</small></div></div>
+      </div>
+      <div class="emer"><b>Les évêques émérites</b>
+        <div><img src="https://archidiocesedebangui.org/wp-content/uploads/2025/05/MGR1.jpg" alt="">Mgr Paulin Pomodimo</div>
+        <div><img src="https://archidiocesedebangui.org/wp-content/uploads/2025/05/MGR2.jpg" alt="">Mgr Joachim Ndayen</div>
+        <div><img src="https://archidiocesedebangui.org/wp-content/uploads/2025/05/MGR3.jpg" alt="">Mgr Joseph Cucherousset</div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="cath">
+        <div class="t">
+          <span class="sec-head" style="display:block;margin:0"><span class="k">Patrimoine</span></span>
+          <h4 style="font-size:38px;font-weight:800;line-height:1.05">La cathédrale Notre-Dame de l'Immaculée Conception</h4>
+          <p>Église mère de l'archidiocèse, la cathédrale de briques rouges est le cœur des grandes célébrations de Bangui. Cette page présentera son histoire, ses horaires de visite et les célébrations présidées par l'Archevêque.</p>
+          <ul><li><span>Historique</span><b>à compléter</b></li><li><span>Horaires des messes</span><b>à compléter</b></li><li><span>Visites et groupes</span><b>sur demande au secrétariat</b></li></ul>
+        </div>
+        <div class="gal">
+          <div style="background-image:url('https://archidiocesedebangui.org/wp-content/uploads/2023/11/bag33.jpg')"></div>
+          <div style="background-image:url('https://archidiocesedebangui.org/wp-content/uploads/2023/11/bag22.jpg')"></div>
+          <div style="background-image:url('https://archidiocesedebangui.org/wp-content/uploads/2023/11/poa9.jpg')"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="sec-head"><div><span class="k">Au service des fidèles</span><h4>Services <em>diocésains</em></h4></div></div>
+      <div class="serv">
+        <div class="sv"><span class="ic">⛪</span><h6>Doyennés &amp; paroisses</h6><p>La carte des doyennés, chaque paroisse avec son curé, ses missions et ses horaires.</p></div>
+        <div class="sv"><span class="ic">📜</span><h6>Chancellerie</h6><p>Certificats de baptême, dispenses et démarches administratives : ce qu'il faut apporter, où et quand.</p></div>
+        <div class="sv"><span class="ic">📰</span><h6>Communication</h6><p>Actualités, communiqués, photos et vidéos des célébrations, publiés par le service communication.</p></div>
+        <div class="sv"><span class="ic">🤝</span><h6>Pastorale &amp; mouvements</h6><p>Catéchèse, jeunesse, familles, Caritas et mouvements d'apostolat : contacts et agenda.</p></div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="contact">
+        <div class="cc">
+          <h5>Secrétariat de l'archidiocèse</h5>
+          <div class="lines">
+            <div><span>E-mail</span><b>archibangui@gmail.com</b></div>
+            <div><span>Téléphone</span><b>+236 75 44 59 75</b></div>
+            <div><span>Adresse</span><b>à compléter</b></div>
+            <div><span>Heures d'ouverture</span><b>à compléter</b></div>
+          </div>
+        </div>
+        <div class="cc news-l">
+          <h5>Recevoir les nouvelles de l'Église de Bangui</h5>
+          <p>Chaque semaine, les actualités, les nominations et l'agenda de l'Archevêque, par e-mail ou sur WhatsApp.</p>
+          <div class="f"><span>Votre e-mail ou votre numéro WhatsApp</span><b>S'abonner</b></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="cols">
+        <div><div class="crest"><img src="https://archidiocesedebangui.org/wp-content/uploads/2023/11/bag5.jpg" alt="" style="width:48px;height:54px"><div><b style="color:#fff;font-size:18px">ARCHIDIOCÈSE <span>DE BANGUI</span></b><small>RÉPUBLIQUE CENTRAFRICAINE</small></div></div><p style="margin-top:14px">« Chrétien de l'archidiocèse de Bangui, debout, va annoncer la Bonne Nouvelle. »</p></div>
+        <div><h6>L'archidiocèse</h6><ul><li>Historique</li><li>L'Archevêque</li><li>La Curie</li><li>Évêques émérites</li></ul></div>
+        <div><h6>Paroisses</h6><ul><li>Doyennés</li><li>Trouver une messe</li><li>Sacrements</li><li>Mouvements</li></ul></div>
+        <div><h6>Suivre</h6><ul><li>Facebook</li><li>YouTube</li><li>WhatsApp</li><li>Lettre d'information</li></ul></div>
+      </div>
+      <div class="bot"><span>© 2026 Archidiocèse de Bangui</span><span>Mentions légales · Plan du site</span></div>
+    </footer>
+  </div>
+
+  <!-- ===================== PLANCHE 2 ===================== -->
+  <div class="step"><span class="n">2</span><h2>Une page d'actualité et la version téléphone</h2><small>Ordinateur et mobile</small></div>
+  <div class="duo">
+    <div class="article">
+      <div class="cover"><div class="h"><span class="cat">Pastorale · Liturgie</span><h3>Cardinal Nzapalainga en visite pastorale à la paroisse Saint Hubert de Ndjoh</h3></div></div>
+      <div class="body">
+        <div class="txt">
+          <div class="by"><i>R</i><span><b style="color:var(--ink)">Par la Rédaction</b> · 31 octobre 2026 · 4 min de lecture</span></div>
+          <p class="lede">C'est une visite pastorale intense que mène le Cardinal Nzapalainga du vendredi 30 octobre au dimanche 1er novembre à la paroisse Saint Hubert de Ndjoh, dans le quatrième doyenné de l'archidiocèse de Bangui.</p>
+          <h6>Étape de Bougoudi-Ngata et Yadama</h6>
+          <p>Avant d'atteindre le cœur de Ndjoh, le Cardinal est allé à la rencontre des fidèles à la base : échanges fraternels et séances de catéchèse vécues dans la joie. Touché par leur dévotion, il a promis une enveloppe de 500 000 FCFA pour les travaux de construction de leur chapelle.</p>
+          <h6>Esprit synodal et dialogue</h6>
+          <p>Le Cardinal a donné un enseignement sur « le rôle des fidèles dans la vie de la paroisse, dans l'esprit synodal », un appel à la coresponsabilité pour bâtir une Église plus forte et plus unie.</p>
+        </div>
+        <div class="aside">
+          <div class="box"><b>Dans cet article</b><ul><li>Paroisse Saint Hubert de Ndjoh</li><li>4e doyenné</li><li>Mois du Rosaire</li></ul></div>
+          <div class="box"><b>Partager</b><div class="share"><span style="background:#25d366">WhatsApp</span><span style="background:#1877f2">Facebook</span></div></div>
+          <div class="box"><b>À lire aussi</b><ul><li>Saint Jean-Baptiste de Bimon : installation du nouveau curé</li><li>La chapelle Saint Marc</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="mobile"><div class="mscr"><span class="notch"></span>
+        <div class="sb"><span>9:41</span><span>4G</span></div>
+        <div class="mnav"><div class="crest"><img src="https://archidiocesedebangui.org/wp-content/uploads/2023/11/bag5.jpg" alt=""><div><b>ARCHIDIOCÈSE <span>DE BANGUI</span></b><small>CENTRAFRIQUE</small></div></div><span class="burger">≡</span></div>
+        <div class="mhero"><div><span class="eyebrow">Cathédrale de Bangui</span><h4>Debout, va annoncer la Bonne Nouvelle</h4></div></div>
+        <div class="mq"><div class="r"><small>CE DIMANCHE</small><b>Trouver une messe</b></div><div><small>PAROISSES</small><b>33</b></div></div>
+        <div class="mlist">
+          <div class="it"><i style="background-image:url('https://archidiocesedebangui.org/wp-content/uploads/2026/10/Photo-lancement_Ndjoh.jpeg')"></i><div><small>Visite pastorale</small><b>Le Cardinal à Saint Hubert de Ndjoh</b></div></div>
+          <div class="it"><i style="background-image:url('https://archidiocesedebangui.org/wp-content/uploads/2026/11/Photo-paroisse-Bimon-768x1024.jpeg')"></i><div><small>Paroisses</small><b>Bimon fête l'installation de son nouveau curé</b></div></div>
+          <div class="it"><i style="background-image:url('https://archidiocesedebangui.org/wp-content/uploads/2023/11/bag33.jpg')"></i><div><small>Patrimoine</small><b>La cathédrale Notre-Dame de l'Immaculée Conception</b></div></div>
+        </div>
+        <div class="mtab"><span class="on">Accueil</span><span>Messes</span><span>Actualités</span><span>Contact</span></div>
+      </div></div>
+      <p class="cap"><b>Sur téléphone</b>, là où la plupart des fidèles lisent les nouvelles : messes, actualités et contact en un geste.</p>
+    </div>
+  </div>
+
+  <div class="foot"><span>Maquette de proposition pour l'Archidiocèse de Bangui, réalisée par E'Markete Agency, à partir des photos et des textes publiés sur archidiocesedebangui.org. Les éléments « à compléter » seront fournis par l'archidiocèse.</span><span>emarketeagency.com</span></div>
+</div>
+</body>
+</html>
